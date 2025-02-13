@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "87c0a868-9569-438b-a5d2-ea4b30dcbc86",
+		"name": "nrApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4629493"
+	},
+	"item": [
+		{
+			"name": "/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api-url}}:{{service-port}}/",
+					"host": [
+						"{{api-url}}"
+					],
+					"port": "{{service-port}}",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ping",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api-url}}:{{service-port}}/ping",
+					"host": [
+						"{{api-url}}"
+					],
+					"port": "{{service-port}}",
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "health",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api-url}}:{{service-port}}/health",
+					"host": [
+						"{{api-url}}"
+					],
+					"port": "{{service-port}}",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getnames",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api-url}}:{{service-port}}/getnames",
+					"host": [
+						"{{api-url}}"
+					],
+					"port": "{{service-port}}",
+					"path": [
+						"getnames"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "senderr",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api-url}}:{{service-port}}/senderr",
+					"host": [
+						"{{api-url}}"
+					],
+					"port": "{{service-port}}",
+					"path": [
+						"senderr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rthrow",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api-url}}:{{service-port}}/rthrow",
+					"host": [
+						"{{api-url}}"
+					],
+					"port": "{{service-port}}",
+					"path": [
+						"rthrow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "caller",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api-url}}:{{service-port}}/caller",
+					"host": [
+						"{{api-url}}"
+					],
+					"port": "{{service-port}}",
+					"path": [
+						"caller"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"Dupe\",\n    \"lastname\": \"Orefuja\",\n    \"age\": 45,\n    \"email\": \"dorefuja@gmail.com\",\n    \"sex\": \"Male\",\n    \"date-of-birth\": \"21-05-1974\",\n    \"isactive\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api-url}}:{{service-port}}/student",
+					"host": [
+						"{{api-url}}"
+					],
+					"port": "{{service-port}}",
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "schedule",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vendorAccount\": \"2453447\",\n    \"firstname\": \"Dupe\",\n    \"lastname\": \"Orefuja\",\n    \"email\": \"dorefuja@gmail.com\",\n    \"addreessTo\": \"5, Legacy Lane, Calgary AB\",\n    \"moveDate\": \"05-11-2025\",\n    \"time\": \"2018-04-23T18:25:43.511Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api-url}}:{{service-port}}/schedule",
+					"host": [
+						"{{api-url}}"
+					],
+					"port": "{{service-port}}",
+					"path": [
+						"schedule"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,64 @@
+{
+  "name": "server.js",
+  "version": "1.0.0",
+  "description": "Demo NewRelic APM App.",
+  "main": "server.js",
+  "author": "Clem Onawole <dapo.onawole@gmail.com>",
+  "contributors": [
+    "Clement Onawole <clement.onawole@gmail.com>"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "lint": "eslint *.js",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write \"src/**/*.js\"",
+    "lint:lockfile": "lockfile-lint --path package-lock.json --type npm --allowed-hosts npm --validate-https --validate-integrity",
+    "test": "npm run unit && npm run versioned",
+    "clean": "rimraf dist",
+    "versioned": "./bin/run-versioned-tests.sh",
+    "versioned:major": "VERSIONED_MODE=--major npm run versioned",
+    "cp": "xargs -n 1 cp -v .env<<<\"dist/mstask/ dist/msauth/ dist/msmsg/\"",
+    "build": "parcel build --no-source-maps --out-dir $OUT_DIR --target node --no-cache",
+    "watch": "parcel watch --no-source-maps --target node --no-cache"
+  },
+  "dependencies": {
+    "@newrelic/winston-enricher": "^4.0.1",
+    "axios": "^1.7.9",
+    "axios-retry": "^4.5.0",
+    "body-parser": "^1.20.3",
+    "chalk": "^5.4.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "http-status": "^2.1.0",
+    "mongodb": "^6.13.0",
+    "mongoose": "^8.10.0",
+    "newrelic": "^12.11.3",
+    "opossum": "^8.4.0",
+    "validator": "^13.12.0",
+    "winston": "^3.17.0"
+  },
+  "peerDependencies": {
+    "newrelic": ">=11.12.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "chai": "^5.1.2",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.20.0",
+    "jest": "^29.7.0",
+    "mocha": "^11.1.0",
+    "mongo-unit": "^3.4.0",
+    "nodemon": "^3.1.9",
+    "parcel-bundler": "^1.12.5",
+    "prettier": "^3.4.2",
+    "rimraf": "^6.0.1",
+    "semver": "^7.7.1",
+    "sinon": "^19.0.2",
+    "typescript-eslint": "^8.23.0"
+  }
+}

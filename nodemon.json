@@ -1,0 +1,4 @@
+{
+    "ignore": ["test/*.js", "lib/*.js", "README.md", "LiCENSE", "*.yaml"],
+    "delay": "2500"
+}
