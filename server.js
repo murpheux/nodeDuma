@@ -41,7 +41,7 @@ const logger = createLogger({
 })
 
 
-var app = express()
+const app = express()
 
 // middleware pipeline
 app.use(cors())

@@ -1,0 +1,6 @@
+{
+    "sonarlint.connectedMode.project": {
+        "connectionId": "http-sclet-9000",
+        "projectKey": "nodeDuma"
+    }
+}

@@ -14,8 +14,8 @@ const errorHandler = (err, _, res, next) => {
     // mongoose duplicate Key
     if (err.code === 11000) {
         
-        var z = err.message
-        var re = z.split(' ')
+        const z = err.message
+        const re = z.split(' ')
 
         error = new appError('the entered ' + re[11] + 'duplicate value', status.BAD_REQUEST, )
     }

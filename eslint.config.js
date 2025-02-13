@@ -8,6 +8,7 @@ export default [
             'no-unused-vars': ['error', {'args': 'after-used', 'argsIgnorePattern': '^_'}],
             'no-use-before-define': 'error',
             'no-alert': 'error',
+            'no-var': 'error',
             'indent': ['error', 4],
             quotes: ['warn', 'single'],
             'spaced-comment': ['error', 'always', {

@@ -1,0 +1,6 @@
+projectKey=nodeDuma
+serverUrl=http://sclet:9000
+serverVersion=25.2.0.102705
+dashboardUrl=http://sclet:9000/dashboard?id=nodeDuma
+ceTaskId=3b3f60cd-96e6-4b60-8009-085b8ada7693
+ceTaskUrl=http://sclet:9000/api/ce/task?id=3b3f60cd-96e6-4b60-8009-085b8ada7693
